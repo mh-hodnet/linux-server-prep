@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ $# -eq 1 ]
+then
+	cat /etc/group | grep -E -q "^$1\:"
+
+	if [ $? -eq 0 ]
+	then
+		echo "Yes! $1 group exists."
+	else
+		echo "ERROR: '$1' group does NOT exist"
+		exit 2
+	fi
+else
+	echo "ERROR: Please provide ONE argument!"
+	exit 1
+fi

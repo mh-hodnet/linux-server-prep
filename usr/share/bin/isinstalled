@@ -1,0 +1,24 @@
+#!/bin/bash
+
+app=$1
+
+check_exit_code() {
+	if [ $? -eq 0 ]
+	then
+		echo  "$app is successfully installed!"
+		exit 0
+	else
+		echo  "E: '$app' does NOT exist."
+		exit 100
+	fi
+}
+
+if command -v $app > /dev/null
+then
+	echo  "$app is already installed!"
+	exit 0
+else
+	echo  "$1 is NOT currently installed - Installing it NOW..."
+	sudo apt install -y $app &> /dev/null
+	check_exit_code
+fi
