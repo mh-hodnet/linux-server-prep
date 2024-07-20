@@ -2,10 +2,10 @@
 
 os_version=`cat /etc/os-release | tr [[:upper:]] [[:lower:]]`
 
-if [[ $os_version =~ 'debian' || $os_version =~ 'ubuntu' ]]
+if [[ $os_version =~ debian || $os_version =~ ubuntu ]]
 then
     sudo apt update && sudo apt dist-upgrade -y
-elif [[ $os_version =~ 'rhel' || $os_version =~ 'fedora' ]]
+elif [[ $os_version =~ rhel || $os_version =~ fedora ]]
 then
     sudo dnf update && sudo dnf upgrade -y
 fi
