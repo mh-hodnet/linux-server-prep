@@ -1,4 +1,4 @@
-# Linux Files and Directories
+# Linux Server Custom Files and Directories
 
 This repository contains useful files and directories for getting
 
@@ -6,13 +6,13 @@ newly spun-up servers for quick deployments.
 
 
 ## The 'bin' directory:
-The `bin` directory contains custom commands/ binaries for the server.
+The `bin` directory contains custom commands and binaries for the server.
 
 These should be moved into the `/usr/share/` directory of the server.
 
-Also, It should be noted that the `/usr/share/bin` directory is contained
+Also, It should be noted that the `/usr/share/bin` directory should be contained
 
-inside of the `$PATH` variable!
+within the `$PATH` variable!
 
 
 ## The 'opt' directory:
