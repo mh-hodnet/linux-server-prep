@@ -36,8 +36,20 @@ fi
 if ! command -v rsync &> /dev/null
 then
 	echo "ERROR: This script requires 'rsync' to be installed."
-	echo "Please use your distribution's package manager to install it and try again.
-	"
+	if [[ $(cat /etc/os-release) =~ [Dd]ebian ]]
+	then
+		echo -n "MESSAGE: Install rsync for you? (y/N) "
+		read option
+		if [ $option == 'y' ] || [ $option == 'Y' ]
+		then
+			echo "MESSAGE: rsync is installing..."
+			sudo apt install rsync
+		fi
+	elif [[ $(cat /etc/os-release) =~ 'rhel' ]]
+	then
+		echo -n "MESSAGE: Install rsync for you? (y/N) "
+		read option
+	fi
 	exit 3
 fi
 
