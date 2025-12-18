@@ -1,11 +1,7 @@
 #!/bin/bash
 
 username='hodnet'
-<<<<<<< HEAD
 hostname='ubuntu.local'
-=======
-hostname='ubuntu.mhodnet.com'
->>>>>>> a3e1dff6daf8b3de4a933b0024853396e1be402e
 
 
 #-----------------------UPDATES-----------------------#
