@@ -1,0 +1,2 @@
+# Please append it to `~/.bashrc` or `/etc/bash.bashrc` configuration file for automatic alias creation on every session:
+ipv4_regex='([0-9]{1,3}\.){3}[0-9]{1,3}(\/[0-9]{1,2})?'
